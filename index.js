@@ -88,11 +88,7 @@ class Form {
      * @returns {{fio, phone, email}}
      */
     getData() {
-        return {
-            fio: this.fio.value,
-            phone: this.phone.value,
-            email: this.email.value
-        }
+        return this._fields.reduce((a,c) => {a[c] = this[c].value; return a}, {})
     }
 
     /**
@@ -100,9 +96,7 @@ class Form {
      * @param obj
      */
     setData(obj) {
-        obj.fio ? this.fio.value = obj.fio : this.fio.value = "";
-        obj.email ? this.email.value = obj.email : this.email.value = "";
-        obj.phone ? this.phone.value = obj.phone : this.phone.value = "";
+        this._fields.forEach(item => obj[item] ? this[item].value = obj[item] : this[item]="")
     }
 
     /**
