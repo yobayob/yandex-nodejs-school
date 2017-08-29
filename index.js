@@ -96,7 +96,7 @@ class Form {
      * @param obj
      */
     setData(obj) {
-        this._fields.forEach(item => obj[item] ? this[item].value = obj[item] : this[item]="")
+        this._fields.forEach(item => obj[item] !== undefined ? this[item].value = obj[item] : this[item].value = "")
     }
 
     /**
