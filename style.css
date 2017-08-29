@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+body {
+    background: #f2f5f7;
+}
+
+.main {
+    position: relative;
+    padding: 40px;
+    z-index: 1;
+    max-width: 640px;
+}
+
+.main label {
+    display: block;
+    position: relative;
+    padding: 3px 20px 0 0;
+}
+
+.main label.req:after {
+    content: " *";
+    color: #ec1c24;
+}
+
+.main .field {
+    display: block;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.main .field input[type='text'],
+.main .field input[type='tel'],
+.main .field input[type='email'] {
+    width: 100%;
+}
+
+.main .field .error {
+    border: 1px solid red;
+}
+
+.main label {
+    float: none;
+    width: auto;
+    padding: 0 0 5px 0;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+div#resultContainer {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 600;
+}
+
+div#resultContainer.success {
+    color: #00ff3b;
+
+}
+
+div#resultContainer.error {
+    color: #ff0030;
+
+}
+div#resultContainer.progress:before {
+        color: gray;
+  content: "Loading...";
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    border: 0px;
+    height: 40px;
+    padding: 0 30px 0 30px;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 600;
+    text-align: center;
+    background: #5fa6ec;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn:disabled {
+    background: #a2d9ff;
+
+}
